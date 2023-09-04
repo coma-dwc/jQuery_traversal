@@ -12,19 +12,18 @@
   </head>
   <body>
     <p class="count-container">選択された要素の数は<span class="count"></span>個です。</p>
-    <div class="parent">
-      parent
-      <div class="child">child</div>
-      <div class="child">
-        child
-        <div class="child">child</div>
+    <div class="parent sato">
+      佐藤家 parent
+      <div class="parent sato">佐藤家 parent
+        <div class="child sato">佐藤家 child</div>
       </div>
-      <div class="child">child</div>
+      <div class="parent suzuki">
+        鈴木家 parent
+        <div class="parent suzuki">
+          鈴木家 parent
+          <div class="child suzuki">鈴木家 child</div>
+        </div>
+      </div>
     </div>
-    <div class="child">
-      child
-      <div class="child">child</div>
-    </div>
-    <div class="parent">parent</div>
   </body>
 </html>
