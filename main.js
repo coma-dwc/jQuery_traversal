@@ -343,12 +343,69 @@
 
 //■3-12  同じ階層にある特定条件の要素を全て取得
 
+// (function($) {
+//   $(document).ready(function() {
+//     let $selected = [];
+
+//     //ここにセレクタを書く
+//     $selected = $(".me").siblings(".john");
+
+//     //マッチした要素にスタイルを付与する
+//     $selected.each(function(index) {
+//       $(this).addClass("bingo");
+//     });
+//     $(".count").text($selected.length);
+
+//   });
+// })(jQuery);
+
+
+//■4-1  .childの1つ上の親の1つ次にある要素を取得
+
+// (function($) {
+//   $(document).ready(function() {
+//     let $selected = [];
+
+//     //ここにセレクタを書く
+//     $selected = $(".child").parent().next();
+
+//     //マッチした要素にスタイルを付与する
+//     $selected.each(function(index) {
+//       $(this).addClass("bingo");
+//     });
+//     $(".count").text($selected.length);
+
+//   });
+// })(jQuery);
+
+
+//■4-2  .childの1つ上の親と同じ階層にあるクラス名が.threeの要素を取得
+
+// (function($) {
+//   $(document).ready(function() {
+//     let $selected = [];
+
+//     //ここにセレクタを書く
+//     $selected = $(".child").parent().siblings(".three");
+
+//     //マッチした要素にスタイルを付与する
+//     $selected.each(function(index) {
+//       $(this).addClass("bingo");
+//     });
+//     $(".count").text($selected.length);
+
+//   });
+// })(jQuery);
+
+
+//■4-3  .childの1つ上の親と同じ階層にあるクラス名が.threeの子要素でクラス名が.friendの要素を取得
+
 (function($) {
   $(document).ready(function() {
     let $selected = [];
 
     //ここにセレクタを書く
-    $selected = $(".me").siblings(".john");
+    $selected = $(".child").parent().siblings(".three").find(".friend");
 
     //マッチした要素にスタイルを付与する
     $selected.each(function(index) {
