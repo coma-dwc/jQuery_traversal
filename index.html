@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQueryのトラバースを理解する</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <p class="count-container">選択された要素の数は<span class="count"></span>個です。</p>
+    <div class="parent">
+      parent
+      <div class="child">child</div>
+      <div class="child">
+        child
+        <div class="child">child</div>
+      </div>
+      <div class="child">child</div>
+    </div>
+    <div class="child">
+      child
+      <div class="child">child</div>
+    </div>
+    <div class="parent">parent</div>
+  </body>
+</html>
